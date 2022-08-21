@@ -1,12 +1,9 @@
-**Responsive side navigation bar
+**Responsive side navigation bar**
 
-__ How to use
-
+__How to use__
 Requirements:
-> Have a browser.
-> Pull, and have fun.
+> Have a browser, know how pull/download, and have fun.
 
-
-Not much. Just a side bar (and some divs and spans).
+Not much. Just a side bar (and some extra divs and spans).
 
 Have fun.

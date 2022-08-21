@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+
+    <title>Responsive Side Nav with container</title>
+</head>
+<body>
+    <nav class="topbar" id="topmenu">   
+   <span class="mb-only"> <i data-feather="menu" onclick="vMenu()" style="left:0;position:absolute;margin-left: .8rem;" class="button-icon"></i><h3></h3></span>
+   
+    <span class="user-info">
+        <span class="username">John Doe</span>  <img src="./avatar.png" alt="username's avatar" class="avatar" />
+    </span>
+
+    </nav>
+    <nav class="sidenav" id="sidenav">
+        <span class="navtitle" id="menu" >
+        <i data-feather="menu" onclick="shMenu()" id="burger" style="left:0;position:absolute;margin-left: .8rem;" class="menu-button burger rotate-90 cp-invis"></i>
+        <i data-feather="x" onclick="shMenu()" id="menux" style="left:0;position:absolute;margin-left: .8rem;" class="menu-button menux rotate-90 cp-invis"></i>
+        <h3> Menu </h3> 
+        <i data-feather="x" onclick="closeMenu()" style="right:0;position:absolute;margin-right: .8rem;" class="button-icon close">  </i></span>
+        <span class="category">Category 1</span>
+        <a href="#" class="button"><i data-feather="folder-plus" class="button-icon"></i>&nbsp; Item 1 </a>
+        <a href="#" class="button"><i data-feather="truck" class="button-icon"></i>&nbsp; Item 2 </a>
+        <a href="#" class="button"><i data-feather="book" class="button-icon"></i>&nbsp; Item 3 </a>
+        <span class="category">Statistics</span>
+        <a href="#" class="button"><i data-feather="trello" class="button-icon"></i>&nbsp; Sales </a>
+        <a href="#" class="button"><i data-feather="trending-up" class="button-icon"></i>&nbsp; Revenue </a>
+      
+        <span class="category">Moderation</span>
+        <a href="#" class="button"><i data-feather="users" class="button-icon"></i>&nbsp; Users </a>
+        <a href="#" class="button"><i data-feather="archive" class="button-icon"></i>&nbsp; Latest Posts </a>
+        <a href="" class="button"><i data-feather="user" class="button-icon"></i>&nbsp; Profile </a>
+
+        <a href="" class="button logout"><i data-feather="log-out" class="button-icon"></i>&nbsp; Log-out</a>
+    </nav>
+    <div class="container">
+
+
+
+
+
+        <h2>Put data in here</h2>
+
+
+
+
+        <!-- CONTAINER END -->
+    </div>
+    <script>
+        feather.replace()
+      </script>
+      <footer>
+        Created by Alexandros Pyrgiotakis.
+      </footer>
+</body>
+<script>
+    function shMenu()
+    {
+        var sa = 16;
+       var sdnav = document.getElementById('sidenav');
+       var mb = document.getElementById('burger');
+       var mbx = document.getElementById('menux');
+        if(sdnav.offsetWidth/sa <= 3.5)
+        {
+            console.log(sdnav.offsetWidth);
+            sdnav.style.width = '16rem';
+            sdnav.style.zIndex = '1';
+            mb.classList.toggle("rotate-90");
+            mb.style.opacity = '0';
+            mbx.style.opacity = '1';
+        }
+        else
+        {
+            sdnav.style.width = '3.5rem';
+            mb.classList.toggle("rotate-90");
+            mb.style.opacity = '1';
+            mbx.style.opacity = '0';
+        }
+        console.log('kalispera' . mb);
+    }
+
+    function vMenu()
+    {
+        var sdnav = document.getElementById('sidenav');
+        sdnav.style.display = 'inline';
+            sdnav.style.width = '100%';
+ 
+        console.log(sdnav.style.display.toString());
+    
+    }   
+    function closeMenu()
+    {
+        var sdnav = document.getElementById('sidenav');
+            sdnav.style.width = '0rem';
+    }
+</script>
+
+
+
+</html>
