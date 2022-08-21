@@ -10,3 +10,5 @@ Requirements:
 Not much. Just a side bar (and some extra divs and spans).
 
 Have fun.
+
+Credits: [Feather icons](https://feathericons.com)
